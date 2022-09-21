@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="description" content="Use internet ilimitada e onde quiser sem pagar taza abusiva as operadoras">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="imagens/logo internet.jpg" type="image/x-icon">
+    <title>Ilimita Net</title>
+</head>
+<body>
+    <header>
+        <img src="imagens/logo.png" alt="logo da ilimita net">
+        <div class="menu">
+            <div class="hamburger"><span style="--i:5%; --r: 45deg;"></span><span style="--i:45%; --r: 45deg;"></span><span style="--i:90%; --r: 135deg;"></span></div>
+            <ul>
+                <li style="--i:0.1s;"><a href="">Serviços</a></li>
+                <li style="--i:0.3s;"><a href="">Perguntas Frequentes</a></li>
+                <li style="--i:0.4s;"><a href="">Contato</a></li>
+            </ul>
+        </div>
+        <ul>
+            <li><a href="">Serviços</a></li>
+            <li><a href="">Perguntas Frequentes</a></li>
+            <li><a href="">Contato</a></li>
+        </ul>
+    </header>
+    <main>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/h522eA5bN6s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class="texto-cta" >Adquira sua internet ilimitada agora mesmo ou peça seu teste grátis</p>
+        <div class="botoes">
+            <div class="btn-servico"><p class="texto-cta-btn">Adquirir o Serviço</p></div>
+            <div class="btn-teste"><p class="texto-cta-btn">Teste gratis</p></div>
+        </div>
+        <div class="faq">
+            <header><h2 class="texto-cta">Perguntas Frequentes</h2></header>
+            <div class="pergunta">
+                <h3>É difícil de usar?</h3>
+            </div>
+            <div class="pergunta">
+                <h3>Precisa de crédito?</h3>
+            </div>
+            <div class="pergunta">
+                <h3>Eu consigo escutar música ou assistir video na rua?</h3>
+            </div>
+            <div class="pergunta">
+                <h3>Como funciona o teste grátis?</h3>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        let menu = document.querySelector('.menu') 
+        document.querySelector('.hamburger').onclick = function () {
+            menu.classList.toggle('ativado')
+        }
+    </script>
+</body>
+</html>

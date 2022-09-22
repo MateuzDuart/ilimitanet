@@ -20,7 +20,10 @@
 </head>
 <body>
     <header>
-        <a href="#Home"><img src="imagens/logo.png" alt="logo da ilimita net"></a>
+
+            <a href="#Home"><img src="imagens/logo.png" alt="logo da ilimita net">
+            <h1>Ilimita-Net</h1>
+            </a>
         <div class="menu">
             <div class="hamburger"><span style="--i:5%; --r: 45deg;"></span><span style="--i:45%; --r: 45deg;"></span><span style="--i:90%; --r: 135deg;"></span></div>
             <ul>
@@ -39,8 +42,14 @@
         <iframe id="Home" width="560" height="315" src="https://www.youtube.com/embed/h522eA5bN6s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <p class="texto-cta" >Adquira sua internet ilimitada agora mesmo ou peça seu teste grátis</p>
         <div class="botoes">
-            <div class="btn-servico"><p class="texto-cta-btn">Adquirir o Serviço</p></div>
-            <div class="btn-teste"><p class="texto-cta-btn">Teste gratis</p></div>
+            <a href="https://api.whatsapp.com/send?phone=5581986437864&text=Ol%C3%A1%20eu%20gostaria%20de%20obter%20o%20plano%20de%201%20m%C3%AAs"
+            target="_blank" rel="external">
+                <div class="btn-servico"><p class="texto-cta-btn">Adquirir o Serviço</p></div>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=5581986437864&text=Ol%C3%A1%20eu%20gostaria%20de%20obter%20o%20teste%20gr%C3%A1tis"
+            target="_blank" rel="external">
+                <div class="btn-teste"><p class="texto-cta-btn">Teste grátis</p></div>
+            </a>
         </div>
         <div id="faq" class="faq">
             <header><h2 class="texto-cta">Perguntas Frequentes</h2></header>
@@ -65,8 +74,8 @@
                     <p>Sim, a internet se parece muito com a que você tem em casa, você vai poder fazer tudo que faz com um wifi só que na rua</p></div>
             </div>
             <div class="pergunta">
-                <h3>Como funciona o teste grátis?</h3>
-                <img class="setaVerMais" src="imagens/setar.svg" alt="seta ver mais">
+                    <h3>Como funciona o teste grátis?</h3>
+                <img id="setaVerMais" class="setaVerMais" src="imagens/setar.svg" alt="seta ver mais">
                 <div class="resposta">
                     <p>O testa grátis lhe dará uma hora para você testar a internet e aprender como funciona</p>
                 </div>
@@ -82,11 +91,15 @@
                 <li>Use internet 4G </li>
                 <li>Faça ligações vias WhatsApp</li>
             </ul>
-            <div class="btn-servico"><p class="texto-cta-btn">Adquirir o Serviço</p></div>
+            <a href="https://api.whatsapp.com/send?phone=5581986437864&text=Ol%C3%A1%20eu%20gostaria%20de%20obter%20o%20plano%20de%201%20m%C3%AAs"
+            target="_blank" rel="external">
+                <div class="btn-servico"><p class="texto-cta-btn">Adquirir o Serviço</p></div>
+            </a>
         </div>
     </main>
     <footer>
-
+        <a href="https://www.instagram.com/ilimita_net/" target="_blank" rel="external"><img src="imagens/Instagram-Icon.png" alt="logo do instagram png" height="40px" width="40px"></a>
+        <p>&copy; Construido por <a href="https://www.instagram.com/mateuz_u_/" target="_blank" rel="external"><strong>Mateus Duarte</strong></a></p>
     </footer>
     <script>
         let menu = document.querySelector('.menu') 
@@ -96,7 +109,8 @@
 
         let setas = document.querySelectorAll('.setaVerMais')
         setas.forEach( (e) => {
-            e.onclick = function () {
+            e.parentElement.onclick = function () {
+                e.classList.toggle('ativado')
                 e.parentElement.querySelector('.resposta').classList.toggle('ativado')
             }
         }

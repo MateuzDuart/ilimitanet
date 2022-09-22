@@ -2,6 +2,10 @@
     margin: unset;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     background: #0D0D0D;
     height: 100vh;
@@ -19,6 +23,20 @@ header > a {
     height: 123%;
     margin-left: 2%;
     margin-top: 11px;
+    display: flex;
+    text-decoration: none;
+}
+
+
+header a h1 {
+   
+    white-space: nowrap;
+    padding-top: 45px;
+    color: #FFF;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(16px, 3vw, 20px);
 }
 
 header img {
@@ -209,7 +227,7 @@ main > iframe {
     height: 60px;
     background-color: #04BF33;
     box-shadow: 0px 0px 15px #04BF33;
-    border-radius: 60px;
+    border-radius: 60px;   
 }
 
 .btn-teste {
@@ -286,7 +304,9 @@ main > iframe {
 }
 
 .resposta {
-    display: none;
+    overflow: hidden;
+    height: 0px;
+    opacity: 0;
     margin-top: 15px;
     background-color: #038c3e75;
     color: #fff;
@@ -294,11 +314,13 @@ main > iframe {
     font-style: normal;
     font-weight: 400;
     line-height: 25px;
+    transition: 0.5s;
 }
 
 .resposta.ativado {
-    display: block;
-    transition: 0.5s;
+    opacity: 1;
+    height: unset;
+    transition: 0.5;
 }
 
 .resposta p{
@@ -317,10 +339,16 @@ main > iframe {
 }
 
 .setaVerMais {
-    height: 25px;
+    height: clamp(15px ,45%,25px);;
     position: absolute;
     right: 20px;
     top: 18px;
+    transition: 0.5s;
+}
+
+.setaVerMais.ativado {
+    transform: rotate(180deg);
+    transition: 0.5s;
 }
 
 .carta {
@@ -329,11 +357,24 @@ main > iframe {
     background: rgba(3, 140, 62, 0.5);
     border-radius: 50px;
     margin: auto;
+    margin-bottom: 50px;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: clamp(12px, 3vw, 20px);
     color: #FFF;
+}
+
+.carta .btn-servico {
+    transform: translateY(-25px);
+}
+
+.carta .btn-servico:hover {
+    transform: scale(120%) translateY(-25px);
+}
+
+.carta .btn-servico:active {
+    transform: scale(80%) translateY(-25px);
 }
 
 .carta h2 {
@@ -367,3 +408,31 @@ main > iframe {
     font-size: clamp(15px, 6vw ,20px);
 }
 
+footer {
+
+    background-color: #02734A;
+    height: 90px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(12px, 3vw, 18px);
+    color: #FFF;
+}
+
+footer p {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 8px;
+}
+
+footer img {
+    padding-top: 5px;
+    display: block;
+    margin: auto;
+}
+
+footer a {
+    color: #04BF33;
+    text-decoration: none;
+}

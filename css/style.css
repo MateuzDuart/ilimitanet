@@ -361,7 +361,7 @@ main > iframe {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: clamp(12px, 3vw, 20px);
+    font-size: clamp(18px, 3vw, 20px);
     color: #FFF;
 }
 
@@ -385,14 +385,14 @@ main > iframe {
 .carta p.chamada {
     text-align: center;
     padding: 10px 10px 30px 10px;
-    font-size: clamp(12px, 3vw, 15px);
+    font-size: clamp(14px, 3vw, 15px);
     color: #B8B8B8;
 }
 
 .carta ul {
     line-height: 30px;
     text-align: start;
-    font-size: clamp(12px, 3vw, 17px);
+    font-size: clamp(15px, 3vw, 17px);
 }
 
 .carta > .btn-servico {
